@@ -1,0 +1,28 @@
+﻿@model List<Sitema_Manejo_Equipos.Models.empleado>
+
+<h2>Lista de Empleados</h2>
+<table style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="padding: 12px;">NumEmpleado</th>
+            <th style="padding: 12px;">Nombre</th>
+            <th style="padding: 12px;">Foto</th>
+            <th style="padding: 12px;">Tipo</th>
+            <th style="padding: 12px;">Coordinador</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td style="padding: 12px;">@emp.num_empleado</td>
+                <td style="padding: 12px;">@emp.nombre</td>
+                <td style="padding: 12px;">
+                    <img src="@emp.foto" alt="Foto de @emp.nombre" style="max-width:250px; max-height:250px;" />
+                </td>
+                <td style="padding: 12px;">@emp.tipo_empleado</td>
+                <td style="padding: 12px;">@emp.coordinador</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+﻿@model List<Sitema_Manejo_Equipos.Models.alumno>
+
+<h2>Lista de Alumnos</h2>
+<table style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="padding: 12px;">Matrícula</th>
+            <th style="padding: 12px;">Nombre</th>
+            <th style="padding: 12px;">Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var alumno in Model)
+        {
+            <tr>
+                <td style="padding: 12px;">@alumno.matricula</td>
+                <td style="padding: 12px;">@alumno.nombre</td>
+                <td style="padding: 12px;">
+                    <img src="@alumno.foto" alt="Foto de @alumno.nombre" style="max-width:250px; max-height:250px;" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

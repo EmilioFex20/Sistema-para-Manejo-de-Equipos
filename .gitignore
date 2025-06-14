@@ -1,0 +1,41 @@
+# --- Visual Studio ---
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- Build ---
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# --- NuGet Packages ---
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# --- ASP.NET Config ---
+appsettings.json
+appsettings.*.json
+secrets.json
+
+# --- Logs / Cache / Misc ---
+*.log
+*.cache
+*.db
+*.pid
+
+# --- Visual Studio Code ---
+.vscode/
+
+# --- Sistema ---
+Thumbs.db
+ehthumbs.db
+.DS_Store
+*.swp
+*.tmp
+*.bak
+
