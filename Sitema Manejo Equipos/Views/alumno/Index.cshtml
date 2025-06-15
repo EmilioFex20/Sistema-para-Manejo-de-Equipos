@@ -5,8 +5,11 @@
     <thead>
         <tr>
             <th style="padding: 12px;">Matrícula</th>
-            <th style="padding: 12px;">Nombre</th>
             <th style="padding: 12px;">Foto</th>
+            <th style="padding: 12px;">Nombre</th>
+            <th style="padding: 12px;">Apellido Paterno</th>
+            <th style="padding: 12px;">Apellido Materno</th>
+            <th style="padding: 12px;">IdProyecto</th>
         </tr>
     </thead>
     <tbody>
@@ -14,10 +17,16 @@
         {
             <tr>
                 <td style="padding: 12px;">@alumno.matricula</td>
-                <td style="padding: 12px;">@alumno.nombre</td>
                 <td style="padding: 12px;">
                     <img src="@alumno.foto" alt="Foto de @alumno.nombre" style="max-width:250px; max-height:250px;" />
                 </td>
+                <td style="padding: 12px;">@alumno.nombre</td>
+                <td style="padding: 12px;">@alumno.apellido_paterno</td>
+                <td style="padding: 12px;">@alumno.apellido_materno</td>
+                <td style="padding: 12px;">@alumno.id_proyecto</td>
+
+
+
             </tr>
         }
     </tbody>

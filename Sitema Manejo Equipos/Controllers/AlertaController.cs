@@ -1,21 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Sitema_Manejo_Equipos.Controllers {
-    public class EmpleadoController : Controller
+    public class AlertaController : Controller
     {
         private readonly AppDbContext _context;
 
-        public EmpleadoController(AppDbContext context)
+        public AlertaController(AppDbContext context)
         {
             _context = context;
         }
 
         public IActionResult Index()
         {
-            var empleados = _context.Empleados.ToList();
-            return View(empleados);
+            var alertas = _context.Alertas.ToList();
+
+            return View(alertas);
         }
     }
+
 }
 

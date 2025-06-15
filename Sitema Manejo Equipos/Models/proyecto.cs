@@ -10,9 +10,9 @@ namespace Sitema_Manejo_Equipos.Models
 
         [Required]
         [MaxLength(50)]
-        public string nombre { get; set; }
+        public string? nombre { get; set; }
 
-        public string descripcion { get; set; }
+        public string? descripcion { get; set; }
 
         public int responsable_proyecto { get; set; }
 

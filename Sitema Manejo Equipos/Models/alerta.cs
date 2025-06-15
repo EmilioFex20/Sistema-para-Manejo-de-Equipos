@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Sitema_Manejo_Equipos.Models
 {
@@ -10,8 +11,10 @@ namespace Sitema_Manejo_Equipos.Models
 
         public int id_equipo { get; set; }
 
-        [ForeignKey("IdEquipo")]
-        public equipo equipo { get; set; }
+        [ForeignKey("id_equipo")]
+        [JsonIgnore]
+        public virtual equipo? equipo { get; set; }
+
 
         public string fecha { get; set; }
 

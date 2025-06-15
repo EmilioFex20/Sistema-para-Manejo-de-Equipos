@@ -1,0 +1,24 @@
+﻿@model List<Sitema_Manejo_Equipos.Models.proyecto>
+
+<h1>Lista de Proyectos</h1>
+<table style="border-collapse: collapse;">
+	<thead>
+		<tr>
+			<th style="padding: 12px;">IdProyecto</th>
+			<th style="padding: 12px;">Nombre</th>
+			<th style="padding: 12px;">Descripción</th>
+			<th style="padding: 12px;">Responsable</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var proyecto in Model)
+		{
+			<tr>
+				<td style="padding: 12px;">@proyecto.id_proyecto</td>
+				<td style="padding: 12px;">@proyecto.nombre</td>
+				<td style="padding: 12px;">@proyecto.descripcion</td>
+				<td style="padding: 12px;">@proyecto.responsable_proyecto</td>
+			</tr>
+		}
+	</tbody>
+</table>

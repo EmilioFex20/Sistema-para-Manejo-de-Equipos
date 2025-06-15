@@ -1,0 +1,24 @@
+﻿@model List<Sitema_Manejo_Equipos.Models.laboratorio>
+
+<h2>Lista de Laboratorios</h2>
+<table style="border-collapse: collapse;">
+	<thead>
+		<tr>
+			<th style="padding: 12px;">IdLab</th>
+			<th style="padding: 12px;">Nombre</th>
+			<th style="padding: 12px;">Descripcion</th>
+			<th style="padding: 12px;">Responsable del laboratorio</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var lab in Model)
+		{
+			<tr>
+				<td style="padding: 12px;">@lab.id_lab</td>
+				<td style="padding: 12px;">@lab.nombre</td>
+				<td style="padding: 12px;">@lab.descripcion</td>
+				<td style="padding: 12px;">@lab.responsable_lab</td>
+			</tr>
+		}
+	</tbody>
+</table>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+namespace Sitema_Manejo_Equipos.Controllers {
     public class AlumnoController : Controller
     {
         private readonly AppDbContext _context;
@@ -16,4 +17,6 @@
             return View(alumnos);
         }
     }
+}
+
 

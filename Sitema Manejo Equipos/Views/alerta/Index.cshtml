@@ -1,0 +1,24 @@
+﻿@model List<Sitema_Manejo_Equipos.Models.alerta>
+
+<h2>Lista de Alertas</h2>
+<table style="border-collapse: collapse;">
+	<thead>
+		<tr>
+			<th style="padding: 12px;">IdAlerta</th>
+			<th style="padding: 12px;">IdEquipo</th>
+			<th style="padding: 12px;">Fecha</th>
+			<th style="padding: 12px;">Hora</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var alerta in Model)
+		{
+			<tr>
+				<td style="padding: 12px;">@alerta.id_alerta</td>
+				<td style="padding: 12px;">@alerta.id_equipo</td>
+				<td style="padding: 12px;">@alerta.fecha</td>
+				<td style="padding: 12px;">@alerta.hora</td>
+			</tr>
+		}
+	</tbody>
+</table>

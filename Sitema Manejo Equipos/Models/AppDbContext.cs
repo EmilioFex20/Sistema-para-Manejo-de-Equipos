@@ -17,6 +17,14 @@ public class AppDbContext : DbContext
     {
         modelBuilder.Entity<empleado>().ToTable("empleado");
         modelBuilder.Entity<alumno>().ToTable("alumno");
+        modelBuilder.Entity<alerta>().ToTable("alertas");
+        modelBuilder.Entity<equipo>().ToTable("equipo");
+        modelBuilder.Entity<laboratorio>().ToTable("laboratorio");
+        modelBuilder.Entity<prestamo>().ToTable("prestamo");
+        modelBuilder.Entity<proyecto>().ToTable("proyecto");
+
+        modelBuilder.Entity<alerta>()
+            .HasKey(a => new { a.id_equipo, a.id_alerta });
 
 
         modelBuilder.Entity<prestamo>()

@@ -1,0 +1,38 @@
+﻿@model List<Sitema_Manejo_Equipos.Models.equipo>
+
+<h2>Lista de Equipos</h2>
+<table style="border-collapse: collapse;">
+	<thead>
+		<tr>
+			<th style="padding: 12px;">IdEquipo</th>
+			<th style="padding: 12px;">Nombre</th>
+			<th style="padding: 12px;">Foto</th>
+			<th style="padding: 12px;">Costo</th>
+			<th style="padding: 12px;">Descripción</th>
+			<th style="padding: 12px;">Origen</th>
+			<th style="padding: 12px;">Proveedor</th>
+			<th style="padding: 12px;">Fecha de adquisicion</th>
+			<th style="padding: 12px;">Clave de producto de fábrica (no serial)</th>
+			<th style="padding: 12px;">IdLaboratorio</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var equipo in Model)
+		{
+			<tr>
+				<td style="padding: 12px;">@equipo.id_equipo</td>
+				<td style="padding: 12px;">@equipo.nombre</td>
+				<td style="padding: 12px;">
+					<img src="@equipo.foto" alt="Foto de @equipo.nombre" style="max-width:250px; max-height:250px;" />
+				</td>
+				<td style="padding: 12px;">@equipo.costo</td>
+				<td style="padding: 12px;">@equipo.descripcion</td>
+				<td style="padding: 12px;">@equipo.origen</td>
+				<td style="padding: 12px;">@equipo.proveedor</td>
+				<td style="padding: 12px;">@equipo.f_adquisicion</td>
+				<td style="padding: 12px;">@equipo.cpf</td>
+				<td style="padding: 12px;">@equipo.id_laboratorio</td>
+			</tr>
+		}
+	</tbody>
+</table>

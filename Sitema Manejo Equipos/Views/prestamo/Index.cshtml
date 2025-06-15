@@ -1,0 +1,34 @@
+﻿@model List<Sitema_Manejo_Equipos.Models.prestamo>
+
+<h2>Lista de Préstamos</h2>
+<table style="border-collapse: collapse;">
+	<thead>
+		<tr>
+			<th style="padding: 12px;">IdPréstamo</th>
+			<th style="padding: 12px;">Fecha de préstamo</th>
+			<th style="padding: 12px;">Lugar a donde se prestó</th>
+			<th style="padding: 12px;">Fecha de devolución</th>
+			<th style="padding: 12px;">Tipo de préstamo</th>
+			<th style="padding: 12px;">Empleado que solicita</th>
+			<th style="padding: 12px;">Alumno que solicita</th>
+			<th style="padding: 12px;">IdEquipo</th>
+			<th style="padding: 12px;">Empleado que autoriza</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var prest in Model)
+		{
+			<tr>
+				<td style="padding: 12px;">@prest.id_prestamo</td>
+				<td style="padding: 12px;">@prest.fecha_prestamo</td>
+				<td style="padding: 12px;">@prest.lugar</td>
+				<td style="padding: 12px;">@prest.fecha_devolucion</td>
+				<td style="padding: 12px;">@prest.tipo_prestamo</td>
+				<td style="padding: 12px;">@prest.empleado_solicita</td>
+				<td style="padding: 12px;">@prest.matricula</td>
+				<td style="padding: 12px;">@prest.id_equipo</td>
+				<td style="padding: 12px;">@prest.empleado_autoriza</td>
+			</tr>
+		}
+	</tbody>
+</table>
